@@ -11,13 +11,17 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-Tparam	start_param(Tparam	*p)
+Tparam	*start_param(Tparam	*p)
 {
 	p = (Tparam *)malloc(sizeof(Tparam));
 	if (!p)
 		exit (1);
 	p->ac = NULL;
-	p->av = 0;
 	p->prm = NULL;
+	p->split = NULL;
+	p->a = NULL;
+	p->b = NULL;
+	p->av = 0;
+	p->len = 0;
 	return (p);
 }

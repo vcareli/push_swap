@@ -28,11 +28,20 @@ typedef struct pilha_A
 
 typedef struct parametros
 {
-	char	*prm;
-	char	**av;
-	int		ac;
+	char		*prm;
+	char		**split;
+	char		**av;
+	int			ac;
+	int			len;
+	Tpilha_A	*a;
+	Tpilha_A	*b;
 } Tparam;
 
-Tparam	start_param(Tparam	*p);
+Tparam		start_param(Tparam	*p);
+void    	ps_error(char *phrase, int error);
+void		verifier_duplicate(char **liste);
+void		ft_free_param(Tparam *str);
+int			check_chiffres(char **liste);
+Tpilha_A	*remplir_list(Tparam *p, char **split, Tpilha_A *stk);
 
 #endif
